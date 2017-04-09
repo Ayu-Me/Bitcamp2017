@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<!-- Amy Yu -->
+<html>
+	<head>
+		<title>
+			Bitcamp 2017
+		</title>
+		<style>
+			html, body {
+				height: 100%;
+				margin: 0;
+				font-family: 'century gothic';
+				text-align: center;
+				background-color: black;
+				}
+			#banner, #score {
+				text-align:center;
+				}
+			#bannerImg, div.navigation, #contentWrapper, div.page, div.background > img, #itemWrapper, #petWrapper, #itemList, #score {
+				width: 100%;
+				}
+			#game, div.page, div.background, div.background > img{
+				height: 100%;
+				}
+			#gameDesc {
+				margin-left: 20%;
+				margin-right: 20%;
+				line-height: 200%;
+				}
+			div.navigation, #contentWrapper, #game
+			{
+				margin: 0 auto;
+			}
+			div.navigation {
+				background-color: #000000;
+				text-align: center;
+				font-size: 18pt;
+				line-height: 150%;
+				}
+			#contentWrapper {
+				background-color:#E6E6E6;
+				height: 90%;
+				}
+			#game {
+				width: 80%;
+				overflow: hidden;
+				}
+			div.background > img {
+				position: relative;
+				}
+			div.content {
+				position: absolute;
+				z-index: 2;
+				height: 90%;
+				width: 80%;
+				}
+			#gamePage, #endScreen {
+				display: none;
+				}
+			#item, #pet, #itemBar {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 70%;
+				height:auto;
+				}
+			#item {
+				width: 10%;
+				}
+			#pet {
+				width: 20%;
+				}
+		</style>
+		<script type = "text/javascript" src = "application.js">
+		</script>
+	</head>
+	<body>
+		<!-- Banner -->
+		<div id = "banner">
+			<img id = "bannerImg" src = "images/banner.png" />
+		</div>
+		<!-- Navigation -->
+		<div class = "navigation">
+			<span style="color:#E6E6E6; text-decoration:none" href="index.html">Pets are Worth Saving (PaWS)</span>
+		</div>
+		<!-- Content -->
+		<div id = "contentWrapper">
+			<div id = "game">
+				<div id = "menu" class = "page">
+					<div class = "content">
+						<h1>Virtual Pet Care</h1>
+						<div id = "gameDesc">
+							Welcome to Virtual Pet Care, a game where to attend to several pet's needs. Select a button below to choose the duration of the game. Use the a, s, d, f, j, k, l, and ; keys to select the item for the pet. Each pet will have a request for what they would like.
+						</div>
+						<br />
+						<button onclick = "playGame(); showPage('gamePage'); setTimeout(endGame, 30000);">
+							30 Seconds
+						</button>
+						<br /><br />
+						<button onclick = "playGame(); showPage('gamePage'); setTimeout(endGame, 60000);">
+							1 minute
+						</button>
+						<br /><br />
+						<button onclick = "playGame(); showPage('gamePage'); setTimeout(endGame, 120000);">
+							2 minutes
+						</button>
+						<br /><br />
+						<button onclick = "playGame(); showPage('gamePage'); setTimeout(endGame, 300000);">
+							5 minutes
+						</button>
+					</div>
+					<div class = "background">
+						<img src = "images/menuBg.jpg" />
+					</div>
+				</div>
+				<div id = "gamePage" class = "page">
+					<div class = "content">
+						<div id = "score">
+							<h1 id = "scoreTxt">Begin!</h1>
+						</div>
+						<div id = "itemWrapper">
+							<img id = "item" src = "images/item1.png"/>
+						</div>
+						<div id = "petWrapper">
+							<img id = "pet" src = "images/pet1.png" />
+						</div>
+						<div id = "itemList">
+							<img id = "itemBar" src = "images/itemBar.png" />
+						</div>
+					</div>
+					<div class = "background">
+						<img src = "images/menuBg.jpg" />
+					</div>
+				</div>
+				<div id = "endScreen" class = "page">
+					<div class = "content">
+						<h1>Thanks for playing!</h1>
+						<h2 id = "result">Score</h2>
+						<button onclick = "showPage('menu');">
+							Menu
+						</button>
+					</div>
+					<div class = "background">
+						<img src = "images/menuBg.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = navigation>
+			<span style="color:#E6E6E6; text-decoration:none" href="index.html">Created for Bitcamp. Disclaimer: All images are copyright to their respective owners.</span>
+		</div>
+	</body>
+</html>
