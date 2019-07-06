@@ -28,38 +28,33 @@ function generateNext()
 	var itemNum = (Math.random()*7) + 1;
 	itemNum = Math.round(itemNum);
 	document.getElementById("item").src = "images/item" + itemNum + ".png";
-	if (itemNum == 1)
-	{
-		kCode = 65;
+	switch(itemNum) {
+		case 1:
+			kCode = 65;
+			break;
+		case 2:
+			kCode = 83;
+			break;
+		case 3:
+			kCode = 68;
+			break;
+		case 4:
+			kCode = 70;
+			break;
+		case 5:
+			kCode = 74;
+			break;
+		case 6:
+			kCode = 75;
+			break;
+		case 7:
+			kCode = 76;
+			break;
+		case 8:
+			kCode = 186;
+			break;
+		break;
 	}
-	if (itemNum == 2)
-	{
-		kCode = 83;
-	}
-	if (itemNum == 3)
-	{
-		kCode = 68;
-	}
-	if (itemNum == 4)
-	{
-		kCode = 70;
-	}
-	if (itemNum == 5)
-	{
-		kCode = 74;
-	}
-	if (itemNum == 6)
-	{
-		kCode = 75;
-	}
-	if (itemNum == 7)
-	{
-		kCode = 76;
-	}
-	if (itemNum == 8)
-	{
-		kCode = 59;
-	}	
 	var petNum = (Math.random()*15) + 1;
 	petNum = Math.round(petNum);
 	document.getElementById("pet").src = "images/pet" + petNum + ".png";
